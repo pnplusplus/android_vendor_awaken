@@ -145,6 +145,10 @@ SKIP_BOOT_JARS_CHECK := true
 # Bootanimation
 $(call inherit-product, vendor/awaken/config/bootanimation.mk)
 
+# BtHelper
+PRODUCT_PACKAGES += \
+    BtHelper
+
 # Awaken packages
 PRODUCT_PACKAGES += \
     AwakenWallpaperStub \
@@ -215,6 +219,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/awaken/prebuilt/common/etc/init/init.openssh.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.openssh.rc
+
+# rsync
+PRODUCT_PACKAGES += \
+    rsync
 
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
